@@ -1,0 +1,24 @@
+#Contains duplicate 
+approach:
+  1. u can traverse for each no. o(N^3)
+  2. u can sort list and traverse once0(nlogn+n)
+  3.create a set if anything same as in set return true o(1)
+
+def contains_dupl(self,nums):
+  h=set()
+  for num in nums:
+    if num in h:
+      return true
+    else:
+      h.append(num)
+  return false
+
+
+def contains_dupl(self,nums):
+    nums.sort()
+    for i in nums:
+      if nums[i]==nums[i-1]:
+        return True
+    return False
+
+
