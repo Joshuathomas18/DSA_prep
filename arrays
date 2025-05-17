@@ -21,4 +21,16 @@ def contains_dupl(self,nums):
         return True
     return False
 
+#Vlid anagram
+
+approach:
+1. see lengths are same
+2. make 2 dict
+3.add all elements to tht dict
+4. if dict same then true else false
+
+def Valid_anagram(self,s,t):
+  if length(s) != length(t):
+
+
 
