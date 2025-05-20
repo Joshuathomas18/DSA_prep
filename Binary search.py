@@ -47,3 +47,23 @@ def find_hours(self,nums,h):
             else:
                 l = k + 1
         return res
+#min value in sorted rotated array
+
+#find left sorted or right sorted region
+#apply B.S there
+def min_value(self,nums):
+ n=len(nums)
+ l,r=0,n-1
+ res=nums[0]
+ while l<=r:
+  if nums[l]<=nums[r]:
+   res=min(res,nums[l])
+  m=(l+r)//2
+  if nums[m]>=nums[l]:
+   l=m+1
+   res = min(res,nums[m])
+  else:
+   r=m-1
+   res = min(res,nums[m])
+ return res
+
